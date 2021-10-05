@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Heroes
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello world!")
+    all_heroes = Heroes.objects.all()
+    context = {
+        'all_heroes': all_heroes
+    }
+    return render(request, 'heroes/index.html', context)
