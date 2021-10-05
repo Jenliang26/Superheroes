@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Hero</title>
+</head>
+<body>
+    <form action="{% url 'heroes:create_hero' %}" method="post">
+        {% csrf_token %} <br />
+        Super Hero Name: 
+        <input 
+        type="text" 
+        name="name" 
+        id="name" /><br />
+        Alter ego: <input 
+            type="text" 
+            name="alter_ego" 
+            id="alter_ego" 
+        /><br />
+        Primary Power:<input
+            type="text"
+            name="primary_power"
+            id="primary_power"
+        /><br />
+        Secondary Power:<input
+            type="text"
+            name="secondary_power"
+            id="secondary_power"
+        /><br />
+        Catchphrase:<input 
+            type="text" 
+            name="catchphrase" 
+            id="catchphrase" /><br />
+        <input type="submit" value="Add new!" />
+    </form>  
+</body>
+</html>
