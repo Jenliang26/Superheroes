@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <form action="{% url 'heroes:edit' single_hero.id %}" method="post"> <br />
+        Super Hero Name:  
+        <input 
+        type="text" 
+        name="super_hero_name" 
+        id="super_hero_name" 
+        value="{{single_hero.super_hero_name}}"/><br />
+        Alter ego:<input
+            type="text"
+            name="alter_ego"
+            id="alter_ego"
+            value="{{single_hero.alter_ego}}"/><br />
+        Primary power:<input
+            type="text"
+            name="primary_power"
+            id="primary_power"
+            value="{{single_hero.primary_power}}"/><br />
+        Secondary power:<input
+            type="text"
+            name="secondary_power"
+            id="secondary_power"
+            value="{{single_hero.secondary_power}}"/><br />
+        Catchphrase:<input 
+            type="text" 
+            name="catchphrase" 
+            id="catchphrase" 
+            value="{{single_hero.catchphrase}}"/><br />
+        <input type="submit" value="Edit Hero"/>       
+</body>
+</html>
