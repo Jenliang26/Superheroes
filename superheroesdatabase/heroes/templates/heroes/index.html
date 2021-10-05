@@ -22,5 +22,7 @@
         <h2> Want to Create a new Hero?!</h2>
         <li><a href="{% url 'heroes:create_hero' %}">Create here!</a></li>
     </ul>
+    {% load static %}
+    <img src="{% static 'heroes/3b6.png' %}" alt="Scattered Comics">
 </body>
 </html>
