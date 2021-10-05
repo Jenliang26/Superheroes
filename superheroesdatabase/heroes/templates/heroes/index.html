@@ -10,9 +10,15 @@
     <h1>List of superheroes!</h1>
     <ul>
         {% for hero in all_heroes %}
-        <li><h2> {{hero.super_hero_name}} {% if hero.alter_ego == "I am Groot" %} - Awe how sweet! {% endif %}</h2>
-            <a href="{% url 'heroes:detail' hero.id %}">See more info</a></li>
+        <li>
+            <h2> {{hero.super_hero_name}} {% if hero.alter_ego == "I am Groot" %} - Awe how sweet! {% endif %}</h2>
+            <a href="{% url 'heroes:detail' hero.id %}">See more info</a>
+        </li>
         {% endfor %}
+    </ul>
+    <ul>   
+        <h2> Want to Create a new Hero?!</h2>
+        <li><a href="{% url 'heroes:create_hero' %}">Create here!</a></li>
     </ul>
 </body>
 </html>
