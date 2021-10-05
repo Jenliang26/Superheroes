@@ -14,6 +14,7 @@
             <h2> {{hero.super_hero_name}} {% if hero.alter_ego == "I am Groot" %} - Awe how sweet! {% endif %}</h2>
             <a href="{% url 'heroes:detail' hero.id %}">See more info</a>
             <a href="{% url 'heroes:edit' hero.id %}">Edit A Hero!</a>
+            <a href="{% url 'heroes:delete' hero.id %}">Delete!</a>
         </li>
         {% endfor %}
     </ul>
